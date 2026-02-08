@@ -1,0 +1,161 @@
+/* =============================
+   PRODUCT PAGES (ROSES, ETC.)
+============================= */
+
+/* Scroll animation */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =============================
+   HERO
+============================= */
+.hero {
+  background: linear-gradient(135deg, var(--pink), var(--pink-light));
+  padding: 100px 40px;
+  text-align: center;
+}
+
+.hero h2 {
+ font-size: clamp(3rem, 8vw, 5rem);
+  color: var(--white);
+}
+
+.hero p {
+olor: var(--white);
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* =============================
+   PRODUCTS GRID (CRITICAL)
+============================= */
+.products {
+ display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 40px;
+}
+
+/* =============================
+   PRODUCT CARD
+============================= */
+.product {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 20px var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px var(--glow-pink);
+}
+
+.product img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.product h3 {
+  margin-top: 15px;
+}
+/* Optional micro-animation (safe) */
+.product {
+  animation: productFade 0.5s ease forwards;
+}
+
+@keyframes productFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* =============================
+   PRICE & BUTTON
+============================= */
+.price {
+  font-size: 1.4rem;
+  color: var(--pink-dark);
+  margin: 12px 0;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: var(--pink);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 0 8px 20px var(--glow-pink);
+}
+
+/* =============================
+   ANIMATIONS
+============================= */
+@keyframes productFade {
+  to {
+    opacity: 1;
+  }
+}
+
+/* =============================
+   ACCESSIBILITY
+============================= */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* =============================
+   MOBILE
+============================= */
+@media (max-width: 768px) {
+  .hero {
+    padding: 70px 20px;
+  }
+
+  .products {
+    padding: 20px;
+  }
+}
+
+/* =============================
+   CATEGORY HERO (PRODUCT PAGES)
+============================= */
+.category-hero {
+  text-align: center;
+  padding: 80px 20px 40px;
+  color: var(--black);
+}
+
+.category-hero h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
+  margin-bottom: 10px;
+}
+
+.category-hero p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+}

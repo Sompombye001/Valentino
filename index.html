@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Valentina</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/heart.png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/editorial.css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Small animations (optional to move to CSS later) -->
+  <style>
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .animate-on-scroll.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    body {
+      animation: pageLoad 0.8s ease-out;
+    }
+    @keyframes pageLoad {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="logo">
+    <a href="index.html">
+      <img src="images/logo.png" alt="Valentina Logo" id="logoImg">
+    </a>
+  </div>
+
+  <nav>
+    <a href="products/roses.html">Roses</a>
+    <a href="products/chocolates.html">Chocolates</a>
+    <a href="products/gifts.html">Gifts</a>
+    <a href="products/teddy.html">Teddy</a>
+
+    <a href="cart.html" class="cart-link">
+      <i data-lucide="shopping-cart"></i>
+      <span class="cart-badge" id="cart-count">0</span>
+    </a>
+  </nav>
+</header>
+
+<!-- CAMPAIGN TITLE -->
+<section class="campaign-title animate-on-scroll">
+  <h1>Valentine's-Drop</h1>
+</section>
+
+<!-- HERO -->
+<section class="hero-frame animate-on-scroll" id="hero-frame">
+
+  <!-- SLIDE 1 -->
+  <div class="hero-slide active">
+    <div class="hero-image">
+      <img src="images/products/roses/rose-1.jpeg" alt="Classic Red Roses">
+    </div>
+    <div class="hero-overlay">
+      <h2>Classic Red Roses</h2>
+      <p>Say it with timeless love.</p>
+      <button onclick="addToCart(
+        'Classic Red Roses',
+        29.99,
+        'images/products/roses/rose-1.jpeg'
+      )">
+        Shop Now
+      </button>
+    </div>
+  </div>
+
+  <!-- SLIDE 2 -->
+  <div class="hero-slide">
+    <div class="hero-image">
+      <img src="images/products/chocolates/choc-1.jpeg" alt="Luxury Chocolates">
+    </div>
+    <div class="hero-overlay">
+      <h2>Luxury Chocolates</h2>
+      <p>Sweet moments, perfectly wrapped.</p>
+      <button onclick="addToCart(
+        'Classic Chocolate Box',
+        19.99,
+        'images/products/chocolates/choc-1.jpeg'
+      )">
+        Shop Now
+      </button>
+    </div>
+  </div>
+
+  <!-- SLIDE 3 -->
+  <div class="hero-slide">
+    <div class="hero-image">
+      <img src="images/products/teddy/teddy-1.jpeg" alt="Valentine Teddy">
+    </div>
+    <div class="hero-overlay">
+      <h2>Valentine Teddy</h2>
+      <p>A hug they’ll never forget.</p>
+      <button onclick="addToCart(
+        'Classic Valentine Teddy',
+        24.99,
+        'images/products/teddy/teddy-1.jpeg'
+      )">
+        Shop Now
+      </button>
+    </div>
+  </div>
+
+  <!-- DOTS -->
+  <div class="hero-dots">
+    <span class="dot active" data-slide="0"></span>
+    <span class="dot" data-slide="1"></span>
+    <span class="dot" data-slide="2"></span>
+  </div>
+</section>
+<section class="editorial-section">
+  <!-- Gradient + floating shapes only on mobile -->
+  <div class="floating-shape shape1"></div>
+  <div class="floating-shape shape2"></div>
+  <div class="floating-shape shape3"></div>
+
+  <div class="editorial-grid-wrapper">
+    <div class="editorial-grid">
+
+      <div class="editorial-card">
+        <div class="img-container">
+          <img src="https://i.pinimg.com/736x/55/fd/2f/55fd2f7da28c32aee6cd8a4b6df3551b.jpg" alt="Roses bouquet">
+          <div class="overlay">
+            <h3>Roses</h3>
+            <p>Romantic rose arrangements crafted for unforgettable moments.</p>
+            <a href="products/roses.html" class="shop-btn">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="editorial-card">
+        <div class="img-container">
+          <img src="https://i.pinimg.com/1200x/c5/1e/b6/c51eb697242c77a08472331d47d7e979.jpg" alt="Luxury chocolates">
+          <div class="overlay">
+            <h3>Chocolates</h3>
+            <p>Luxury chocolates made to celebrate love and sweetness.</p>
+            <a href="products/chocolates.html" class="shop-btn">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="editorial-card">
+        <div class="img-container">
+          <img src="https://i.pinimg.com/1200x/c8/6e/24/c86e24e2df13995eab43f0cb32ddcae7.jpg" alt="Teddy bears">
+          <div class="overlay">
+            <h3>Teddy Bears</h3>
+            <p>Soft teddies filled with warmth and love.</p>
+            <a href="products/teddy.html" class="shop-btn">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer animate-on-scroll">
+  <div class="footer-container">
+
+    <div class="footer-brand">
+      <h2>Valentina</h2>
+      <p>Curated Valentine’s gifts designed to turn moments into memories.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Shop</h4>
+      <a href="products/roses.html">Roses</a>
+      <a href="products/chocolates.html">Chocolates</a>
+      <a href="products/gifts.html">Gifts</a>
+      <a href="products/teddy.html">Teddy Bears</a>
+    </div>
+
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <i data-lucide="instagram"></i>
+        <i data-lucide="twitter"></i>
+        <i data-lucide="facebook"></i>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Valentina. Made with love
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="js/script.js"></script>
+<script>
+  lucide.createIcons();
+
+  // Scroll animations
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add("in-view");
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll(".animate-on-scroll")
+    .forEach(el => observer.observe(el));
+
+  // Hero slider
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".hero-slide");
+  const dots = document.querySelectorAll(".dot");
+
+  function showSlide(i) {
+    slides.forEach(s => s.classList.remove("active"));
+    dots.forEach(d => d.classList.remove("active"));
+    slides[i].classList.add("active");
+    dots[i].classList.add("active");
+    currentSlide = i;
+  }
+
+  dots.forEach(dot =>
+    dot.addEventListener("click", () =>
+      showSlide(Number(dot.dataset.slide)))
+  );
+
+  setInterval(() => {
+    showSlide((currentSlide + 1) % slides.length);
+  }, 5000);
+</script>
+
+</body>
+</html>

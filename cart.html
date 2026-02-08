@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart — Valentina</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/heart.png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+  <div class="logo">
+    <a href="index.html">
+      <img src="images/logo.png" alt="Valentina Logo">
+    </a>
+  </div>
+
+  <nav>
+    <a href="products/roses.html">Roses</a>
+    <a href="products/chocolates.html">Chocolates</a>
+    <a href="products/gifts.html">Gifts</a>
+    <a href="products/teddy.html">Teddy</a>
+
+    <a href="cart.html" class="cart-link">
+      <i data-lucide="shopping-cart"></i>
+      <span class="cart-badge" id="cart-count">0</span>
+    </a>
+  </nav>
+</header>
+
+<!-- ================= CART ================= -->
+<section class="cart">
+  <h2>Your Shopping Cart</h2>
+
+  <!-- CART ITEMS -->
+  <div id="cart-items" class="cart-items"></div>
+
+  <!-- EMPTY CART -->
+  <div id="empty-cart" class="empty-cart hidden">
+    <i data-lucide="shopping-bag"></i>
+    <h3>Your cart is empty</h3>
+    <p>Add something special 💝</p>
+    <a href="index.html" class="checkout-btn">
+      Continue Shopping
+    </a>
+  </div>
+
+  <!-- CART SUMMARY -->
+  <div class="cart-summary" id="cart-summary">
+    <p>Total</p>
+    <p class="total">$<span id="cart-total">0.00</span></p>
+    <button class="checkout-btn" onclick="openCheckout()">Checkout</button>
+  </div>
+</section>
+
+<!-- ================= CHECKOUT MODAL ================= -->
+<div class="modal-overlay" id="checkoutModal">
+  <div class="modal">
+    <h2>Order Summary</h2>
+
+    <div id="modal-items"></div>
+
+    <div class="modal-total">
+      Total: $<span id="modal-total">0.00</span>
+    </div>
+
+    <div class="modal-actions">
+      <button class="icon-btn" onclick="closeCheckout()" title="Close">
+        <i data-lucide="x"></i>
+      </button>
+
+      <a href="checkout.html" class="icon-btn primary" title="Checkout">
+        <i data-lucide="credit-card"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- HEART PARTICLES -->
+<div id="heart-particles"></div>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="js/script.js"></script>
+<script>
+  lucide.createIcons();
+</script>
+
+</body>
+</html>

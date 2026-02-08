@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Roses — Valentina</title>
+
+  <link rel="icon" type="image/png" href="/valentines_site/images/heart.png">
+
+  <link rel="stylesheet" href="/valentines_site/css/style.css" />
+  <link rel="stylesheet" href="/valentines_site/css/products.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header" id="header">
+  <div class="logo">
+    <a href="/valentines_site/index.html">
+      <img src="/valentines_site/images/logo.png" alt="Valentina Logo">
+    </a>
+  </div>
+
+  <nav>
+    <a href="/valentines_site/products/roses.html" class="active">Roses</a>
+    <a href="/valentines_site/products/chocolates.html">Chocolates</a>
+    <a href="/valentines_site/products/gifts.html">Gifts</a>
+    <a href="/valentines_site/products/teddy.html">Teddy</a>
+
+    <a href="/valentines_site/cart.html" class="cart-link">
+      <i data-lucide="shopping-cart"></i>
+      <span class="cart-badge" id="cart-count">0</span>
+    </a>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="category-hero">
+  <h1>Roses Collection</h1>
+  <p>Timeless romance in every bloom</p>
+</section>
+
+<!-- ================= PRODUCTS ================= -->
+<main class="products">
+
+  <div class="product">
+    <img src="/valentines_site/images/products/roses/rose-1.jpeg" alt="Classic Red Roses">
+    <h3>Classic Red Roses</h3>
+    <p class="price">$29.99</p>
+    <button onclick="addToCart(
+      'Classic Red Roses',
+      29.99,
+      '/valentines_site/images/products/roses/rose-1.jpeg'
+    )">
+      Add to Cart
+    </button>
+  </div>
+
+  
+
+  <div class="product">
+    <img src="/valentines_site/images/products/roses/rose-3.jpeg" alt="Luxury Rose Box">
+    <h3>Luxury Rose Box</h3>
+    <p class="price">$49.99</p>
+    <button onclick="addToCart(
+      'Luxury Rose Box',
+      49.99,
+      '/valentines_site/images/products/roses/rose-3.jpeg'
+    )">
+      Add to Cart
+    </button>
+  </div>
+
+  <div class="product">
+    <img src="/valentines_site/images/products/roses/rose-4.jpeg" alt="Pink Romance Bouquet">
+    <h3>Pink Romance Bouquet</h3>
+    <p class="price">$27.99</p>
+    <button onclick="addToCart(
+      'Pink Romance Bouquet',
+      27.99,
+      '/valentines_site/images/products/roses/rose-4.jpeg'
+    )">
+      Add to Cart
+    </button>
+  </div>
+
+</main>
+
+
+
+<!-- ================= SCRIPTS ================= -->
+<script src="/valentines_site/js/script.js"></script>
+<script>
+  lucide.createIcons();
+
+  // Header shrink on scroll
+  window.addEventListener("scroll", () => {
+    document
+      .getElementById("header")
+      .classList.toggle("scrolled", window.scrollY > 50);
+  });
+</script>
+
+</body>
+</html>

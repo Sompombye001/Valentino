@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Teddy Bears — Valentina</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/valentines_site/images/heart.png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/valentines_site/css/style.css" />
+  <link rel="stylesheet" href="/valentines_site/css/products.css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header" id="header">
+  <div class="logo">
+    <a href="/valentines_site/index.html">
+      <img src="/valentines_site/images/logo.png" alt="Valentina Logo">
+    </a>
+  </div>
+
+  <nav>
+    <a href="/valentines_site/products/roses.html">Roses</a>
+    <a href="/valentines_site/products/chocolates.html">Chocolates</a>
+    <a href="/valentines_site/products/gifts.html">Gifts</a>
+    <a href="/valentines_site/products/teddy.html" class="active">Teddy</a>
+
+    <a href="/valentines_site/cart.html" class="cart-link">
+      <i data-lucide="shopping-cart"></i>
+      <span class="cart-badge" id="cart-count">0</span>
+    </a>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="category-hero">
+  <h1>Teddy Bear Collection</h1>
+  <p>Soft hugs made with love</p>
+</section>
+
+<!-- ================= PRODUCTS ================= -->
+<main class="products">
+
+  <div class="product">
+    <img src="/valentines_site/images/products/teddy/teddy-4.jpeg" alt="Classic Valentine Teddy">
+    <h3>Classic Valentine Teddy</h3>
+    <p class="price">$24.99</p>
+    <button onclick="addToCart(
+      'Classic Valentine Teddy',
+      24.99,
+      '/valentines_site/images/products/teddy/teddy-4.jpeg'
+    )">
+      Add to Cart
+    </button>
+  </div>
+
+  <div class="product">
+    <img src="/valentines_site/images/products/teddy/teddy-2.jpeg" alt="Love Letter Teddy">
+    <h3>Love Letter Teddy</h3>
+    <p class="price">$29.99</p>
+    <button onclick="addToCart(
+      'Love Letter Teddy',
+      29.99,
+      '/valentines_site/images/products/teddy/teddy-2.jpeg'
+    )">
+      Add to Cart
+    </button>
+  </div>
+
+  <div class="product">
+    <img src="/valentines_site/images/products/teddy/teddy-3.jpeg" alt="Love Teddy">
+    <h3>Love Teddy</h3>
+    <p class="price">$49.99</p>
+    <button onclick="addToCart(
+      'Love Teddy',
+      49.99,
+      '/valentines_site/images/products/teddy/teddy-3.jpeg'
+    )">
+      Add to Cart
+    </button>
+  </div>
+
+</main>
+
+
+
+<!-- ================= SCRIPTS ================= -->
+<script src="/valentines_site/js/script.js"></script>
+<script>
+  lucide.createIcons();
+
+  // Header shrink on scroll
+  window.addEventListener("scroll", () => {
+    document
+      .getElementById("header")
+      .classList.toggle("scrolled", window.scrollY > 50);
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+/* ===================== EDITORIAL SECTION ===================== */
+.editorial-section {
+  position: relative;
+  overflow: hidden;
+  padding: 80px 20px;
+  font-family: 'Arial', sans-serif;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  background: #fff; /* Desktop fallback */
+}
+
+/* ===================== FLOATING SHAPES / MOBILE GRADIENT ===================== */
+.floating-shape {
+  display: none; /* only mobile */
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: floatShapes 25s ease-in-out infinite alternate;
+}
+.floating-shape.shape1 { width: 200px; height: 200px; top: 10%; left: 5%; }
+.floating-shape.shape2 { width: 150px; height: 150px; top: 40%; left: 70%; animation-delay: 5s; }
+.floating-shape.shape3 { width: 100px; height: 100px; top: 60%; left: 30%; animation-delay: 10s; }
+
+/* ===================== GRID ===================== */
+.editorial-grid-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===================== CARD STYLE ===================== */
+.editorial-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.img-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.img-container img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.editorial-card:hover img {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(199,21,133,0.2), rgba(199,21,133,0.7));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 20px;
+  color: #fff;
+  transform: translateY(100%);
+  transition: transform 0.5s ease;
+}
+
+.editorial-card:hover .overlay {
+  transform: translateY(0);
+}
+
+.overlay h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.overlay p {
+  font-size: 1rem;
+  margin: 0 0 15px;
+}
+
+.shop-btn {
+  padding: 10px 25px;
+  background: #fff;
+  color: #c71585;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 30px;
+  transition: transform 0.3s, background 0.3s, color 0.3s;
+}
+
+.shop-btn:hover {
+  background: #c71585;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* ===================== ANIMATIONS ===================== */
+@keyframes floatShapes {
+  0% { transform: translate(0,0) scale(1); opacity: 0.2; }
+  50% { transform: translate(50px,-30px) scale(1.1); opacity: 0.3; }
+  100% { transform: translate(-30px,40px) scale(0.9); opacity: 0.2; }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Owner Panel</title>
+  <style>
+    body {
+      font-family: Inter, Arial, sans-serif;
+      background: #f8f8f8;
+      padding: 40px;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    .order {
+      background: white;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    }
+    button {
+      padding: 10px 16px;
+      background: #111;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Owner Orders</h1>
+<button onclick="logout()">Logout</button>
+
+<div id="orders"></div>
+
+<script src="js/owner.js"></script>
+</body>
+</html>
