@@ -1,20 +1,9 @@
 {
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
   "routes": [
     { "src": "^/$", "dest": "/index.html" },
-
-    { "src": "^/cart$", "dest": "/cart.html" },
-    { "src": "^/checkout$", "dest": "/checkout.html" },
-    { "src": "^/checkout-success$", "dest": "/checkout-success.html" },
-
-    { "src": "^/owner$", "dest": "/owner.html" },
-    { "src": "^/ownerlogin$", "dest": "/ownerlogin.html" },
-
-    { "src": "^/products/chocolates$", "dest": "/products/chocolates.html" },
-    { "src": "^/products/gifts$", "dest": "/products/gifts.html" },
-    { "src": "^/products/roses$", "dest": "/products/roses.html" },
-    { "src": "^/products/teddy$", "dest": "/products/teddy.html" },
-
-    { "src": "/(.*)", "dest": "/$1" }
+    { "src": "^/(.*)$", "dest": "/$1" }
   ]
 }
-s
